@@ -1,15 +1,15 @@
 <p align="center">
-  <img src="docs/pbir.gif" alt="pbir demo" width="700">
+  <img src="pbir.gif" alt="pbir demo" width="700">
 </p>
 
 <h1 align="center">pbir.tools</h1>
 
 <p align="center">
-  <strong>CLI + MCP tools for Power BI report automation</strong>
+  <strong>CLI tools for Power BI report automation</strong>
 </p>
 
 <p align="center">
-  Browse, edit, validate, and publish PBIR reports from the terminal or through AI assistants.
+  Browse, edit, validate, and publish PBIR reports from the terminal.
 </p>
 
 > [!WARNING]
@@ -18,16 +18,7 @@
 ## What You Get
 
 - `pbir`: command-line interface for local PBIR report work
-- `pbir-mcp`: MCP server for Claude Code, Cursor, Copilot, Gemini CLI, and other MCP clients
 - `pbir setup`: helper for installing assistant-specific instructions and skills
-
-## Choose Your Interface
-
-| If you want to... | Use |
-|---|---|
-| Inspect a report, make targeted edits, or publish changes yourself | `pbir` CLI |
-| Let an AI assistant inspect and modify reports through tools | `pbir-mcp` |
-| Configure assistant-specific rules or skill files locally | `pbir setup` |
 
 ## Install
 
@@ -53,7 +44,6 @@ After installation, open a new terminal and verify:
 
 ```bash
 pbir --version
-pbir-mcp --help
 ```
 
 ## Quick Start
@@ -82,18 +72,15 @@ pbir setup --cursor
 pbir setup report "Sales.Report" --claude-hooks
 ```
 
-If your assistant supports MCP, point it at `pbir-mcp`. Start with the [MCP guide](docs/mcp/README.md).
-
 `pbir script` also exists as an advanced Python-based escape hatch for custom automation. It is intentionally not the main public workflow and is only mentioned briefly in the CLI operations docs.
 
 ## Documentation
 
 | Area | What it covers |
 |---|---|
-| [Getting Started](docs/getting-started.md) | Install, terminal basics, first 5 minutes |
-| [CLI Docs](docs/cli/README.md) | Command groups and task-based CLI reference |
-| [CLI Workflows](docs/cli/workflows.md) | End-to-end report workflows |
-| [MCP Docs](docs/mcp/README.md) | Setup and use `pbir-mcp` with AI assistants |
+| [Getting Started](getting-started.md) | Install, terminal basics, first 5 minutes |
+| [CLI Docs](cli/README.md) | Command groups and task-based CLI reference |
+| [CLI Workflows](cli/workflows.md) | End-to-end report workflows |
 
 ## Safety
 
@@ -106,4 +93,3 @@ If your assistant supports MCP, point it at `pbir-mcp`. Start with the [MCP guid
 
 - Run `pbir --help` for the top-level CLI surface.
 - Run `pbir <command> --help` for command-specific usage.
-- Run `pbir-mcp --help` for MCP server options.

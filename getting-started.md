@@ -8,10 +8,7 @@ Download the latest installer for your platform from [GitHub Releases](https://g
 
 ```bash
 pbir --version
-pbir-mcp --help
 ```
-
-If you only plan to use the CLI, `pbir --version` is enough. If you want AI-assistant integration, keep `pbir-mcp` installed as well.
 
 ### If Your OS Blocks the Installer
 
@@ -150,16 +147,12 @@ pbir setup --cursor
 pbir setup --copilot
 ```
 
-If your assistant supports MCP, configure it to launch `pbir-mcp` and start with the docs in [mcp/README.md](mcp/README.md).
-
 ## Next Steps
 
 - [CLI Docs](cli/README.md)
 - [CLI Workflows](cli/workflows.md)
-- [MCP Docs](mcp/README.md)
 
 ## Help
 
 - `pbir --help`
 - `pbir <command> --help`
-- `pbir-mcp --help`
