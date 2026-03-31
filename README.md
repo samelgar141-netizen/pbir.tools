@@ -5,11 +5,11 @@
 <h1 align="center">pbir.tools</h1>
 
 <p align="center">
-  <strong>CLI tools for Power BI report automation</strong>
+  <strong>CLI tools for Power BI report automation; built for humans, optimized for agents</strong>
 </p>
 
 <p align="center">
-  Browse, edit, validate, and publish PBIR reports from the terminal.
+  Browse, edit, validate, and publish PBIR reports from the terminal, or ask Claude Code, Codex, or Copilot to use the `pbir-cli` after running `pbir setup`.
 </p>
 
 > [!WARNING]
