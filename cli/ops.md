@@ -97,13 +97,14 @@ pbir open "Sales.Report/Overview.Page"
 
 If you pass a page path, `pbir` sets that page active before opening the report.
 
-## Advanced: `script`
+## `batch`
 
-`pbir script` exists for advanced Python-based automation when the built-in command surface is not enough.
+`pbir batch` runs declarative, multi-step automation specs. Define changes in a JSON file and preview or apply them.
 
 ```bash
-pbir script --list-examples
-pbir script my_script.py "Sales.Report"
+pbir batch examples                                        # List bundled examples
+pbir batch example brand-format                            # Print an example spec
+pbir batch validate spec.json                              # Validate a spec file
+pbir batch plan spec.json --root "Report.Report"           # Preview without writing
+pbir batch run spec.json --root "Report.Report"            # Execute
 ```
-
-This is deliberately an advanced escape hatch, not the primary way most end users should approach `pbir`. If you need it, start with `pbir script --help`.

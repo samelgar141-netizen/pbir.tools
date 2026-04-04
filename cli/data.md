@@ -68,8 +68,8 @@ pbir dax measures list "Report.Report"
 pbir dax measures add "Report.Report" -t Sales -n "Total Revenue" -e "SUM('Sales'[Revenue])"
 pbir dax measures add "Report.Report" -t _Fmt -n "StatusColor" -e 'IF([Sales]>[Target],"good","bad")' --data-type Text
 pbir dax measures update "Report.Report" -n "Total Revenue" -e "SUMX('Sales', [Qty] * [Price])"
-pbir dax measures rename "Report.Report" -n "OldName" --new-name "NewName"
-pbir dax measures clear "Report.Report"                    # Remove all measures
+pbir dax measures rename "Report.Report" "OldName" "NewName"
+pbir rm "Report.Report" --measures -f                      # Remove all measures
 pbir dax measures json "Report.Report"                     # Raw JSON
 ```
 

@@ -125,7 +125,7 @@ pbir visuals legend "path" --show --position top --fontSize 10
 pbir visuals axis "path" --type category --show --fontSize 10
 pbir visuals axis "path" --type value --show --gridlines
 pbir visuals labels "path" --show --fontSize 10 --color "#333333"
-pbir visuals sort "path" --by "Sales.Revenue" --direction descending
+pbir visuals sort "path" -f "Sales.Revenue" -d Descending
 ```
 
 ### Data Binding
@@ -140,7 +140,7 @@ pbir visuals bind "path" --list-roles                      # Show available role
 ### Conditional Formatting
 
 ```bash
-pbir visuals cf "path" --list                              # List CF rules
+pbir visuals cf "path"                                       # List CF rules
 pbir visuals cf "path" --measure "labels.color _Fmt.StatusColor"  # Apply
 pbir visuals cf "path" --remove "labels.color"             # Remove
 pbir visuals cf "source" --copy-to "target"                # Copy between visuals
@@ -162,7 +162,8 @@ pbir visuals format "path" -p lineStyles       # Filter to container
 pbir visuals properties "path"                 # Tree view of properties
 pbir visuals properties -s "marker"            # Fuzzy search
 pbir visuals clear-formatting "path" --dry-run # Preview clearing overrides
-pbir visuals hide "path" --no-show             # Hide visual
+pbir visuals hide "path"                        # Hide visual
+pbir visuals hide "path" --show                # Unhide visual
 pbir visuals query "path"                      # Extract DAX query
 ```
 
@@ -176,13 +177,13 @@ Create pages with `pbir add page`. Delete with `pbir rm`. Copy with `pbir cp`. M
 pbir pages rename "Report.Report/Old Name.Page" "New Name"
 pbir pages resize "Report.Report/Page.Page" --width 1920 --height 1080
 pbir pages type "Report.Report/Page.Page" --type 16:9     # Preset: 16:9, 4:3, letter, tooltip, custom
-pbir pages background "Report.Report/Page.Page" --color "#F0F8FF"
 pbir pages background "Report.Report/Page.Page" --image bg.png
 pbir pages wallpaper "Report.Report/Page.Page" --color "#2B579A"
 pbir pages move "Report.Report/Sales.Page" --to 1          # Reorder in tab bar
 pbir pages active-page "Report.Report" "HomePage"           # Set landing page
-pbir pages display "Report.Report/Page.Page" --mode FitToPage
-pbir pages hide "Report.Report/Page.Page" --hidden
+pbir pages display "Report.Report/Page.Page" -o FitToPage
+pbir pages hide "Report.Report/Page.Page"                    # Hide page
+pbir pages hide "Report.Report/Page.Page" --show             # Unhide page
 pbir pages interactions "Report.Report/Page.Page" --list
 pbir pages interactions "Report.Report/Page.Page" --set Visual1 Visual2 none
 ```

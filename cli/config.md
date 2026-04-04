@@ -1,12 +1,12 @@
-# Configuration and Assistant Setup
+# Configuration and Agent Setup
 
-These commands are not about editing report content directly. They control how `pbir` behaves on your machine and help you set up assistant-friendly local files.
+These commands control how `pbir` behaves on your machine and help you set up agent-friendly local files.
 
 Most users will only touch this section occasionally, usually when:
 
 - setting a preferred output or debug mode
 - checking where config and schema files live
-- installing local instructions or skills for an assistant they already use
+- installing skills and plugins for an agent they already use
 
 ## `pbir config`
 
@@ -31,36 +31,31 @@ Use it when you want to make the CLI behave more predictably across sessions ins
 
 ## `pbir setup`
 
-`pbir setup` installs assistant-specific files for local AI-assisted workflows.
+`pbir setup` installs Power BI plugins from the [power-bi-agentic-development](https://github.com/data-goblin/power-bi-agentic-development) marketplace. These plugins provide skills, hooks, and agents that teach your coding agent how to use `pbir` effectively.
 
-It is useful when you already work with tools like Claude Code, Cursor, Copilot, Gemini CLI, or Pi and want `pbir`-specific instructions or helper files in the right place.
-
-Common examples:
+It auto-detects which agents you have installed and lets you pick which plugins to install interactively.
 
 ```bash
-pbir setup --claude-code
-pbir setup --cursor
-pbir setup --copilot
-pbir setup --gemini
-pbir setup --pi
-pbir setup --claude-code --memory claude.md
-pbir setup --claude-code --user
-pbir setup --claude-code --project
-pbir setup report "Sales.Report" --claude-hooks
-pbir setup uninstall
+pbir setup                                      # Interactive (detect agents)
+pbir setup --all                                # Install all plugins, all agents
+pbir setup --agent claude-code --all            # Claude Code only, all plugins
+pbir setup --plugin reports --plugin fabric-cli # Specific plugins
+pbir setup --force                              # Force reinstall
+pbir setup uninstall                            # Show removal instructions
 ```
 
-What it supports:
+| Flag | Purpose |
+|---|---|
+| `--agent` / `-a` | Target agent: `claude-code`, `copilot`, `cursor`, `gemini`, `codex` |
+| `--plugin` / `-p` | Specific plugin(s) to install (repeatable) |
+| `--all` | Install all available plugins |
+| `--force` / `-f` | Force reinstall plugins |
 
-- Claude Code skills and hook files
-- Cursor rules
-- GitHub Copilot instructions
-- Gemini CLI instructions
-- Pi instructions
-- user-level or project-level installation
-- optional memory files
+For report-specific Claude Code hooks:
 
-Use `pbir setup report "Report.Report" --claude-hooks` when you want report-local Claude Code hook files for deployment-oriented workflows around a specific report.
+```bash
+pbir setup report "Sales.Report" --claude-hooks
+```
 
 ## Environment Variables
 
