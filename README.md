@@ -79,9 +79,9 @@ pbir validate "Sales.Report"                                           # Health 
 Report.Report/Page.Page/Visual.Visual
 ```
 
-## AI Assistants & Plugins
+## Agents & Plugins
 
-`pbir` is built for agents. To get the most out of it, install the **Power BI plugins** from the [power-bi-agentic-development](https://github.com/data-goblin/power-bi-agentic-development) marketplace. These plugins provide skills, hooks, and agents that teach your assistant how to work with Power BI reports, semantic models, themes, DAX, and more.
+`pbir` is built for agents. To get the most out of it, install the **Power BI plugins** from the [power-bi-agentic-development](https://github.com/data-goblin/power-bi-agentic-development) marketplace. These plugins provide skills, hooks, and agents that teach your agent how to work with Power BI reports, semantic models, themes, DAX, and more.
 
 <details>
 <summary><strong>Option 1: Install plugins via <code>pbir setup</code></strong> (recommended)</summary>
@@ -117,7 +117,7 @@ copilot plugin install data-goblin/power-bi-agentic-development
 
 </details>
 
-After installing, your assistant will have access to skills for report creation, visual formatting, field binding, conditional formatting, theme management, filters, bookmarks, and more -- all driven by `pbir` commands under the hood.
+After installing, your agent will have access to skills for report creation, visual formatting, field binding, conditional formatting, theme management, filters, bookmarks, and more -- all driven by `pbir` commands under the hood.
 
 ## Documentation
 
