@@ -22,6 +22,9 @@
 > [!WARNING]
 > `pbir.tools` is in beta. Back up reports before large edits, especially bulk formatting, conversion, merge, and publish workflows.
 
+> [!IMPORTANT]
+> After installing `pbir`, run `pbir setup` to install agent skills, or install them from the [power-bi-agentic-development](https://github.com/data-goblin/power-bi-agentic-development) marketplace. Without skills, your agent won't know how to use the CLI.
+
 ---
 
 ## Install
