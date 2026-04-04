@@ -9,20 +9,24 @@
 </p>
 
 <p align="center">
-  Browse, edit, validate, and publish PBIR reports from the terminal, or ask Claude Code, Codex, or Copilot to use the `pbir-cli` after running `pbir setup`.
+  Browse, edit, validate, and publish PBIR reports from the terminal, or let Claude Code, Codex, or Copilot drive the CLI after running <code>pbir setup</code>.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/version-0.9.4-blue" alt="Version">
+  <img src="https://img.shields.io/badge/Power_BI-F2C811?logo=powerbi&logoColor=000" alt="Power BI">
+  <img src="https://img.shields.io/badge/Microsoft_Fabric-008272" alt="Microsoft Fabric">
+  <img src="https://img.shields.io/badge/license-proprietary-lightgrey" alt="License">
 </p>
 
 > [!WARNING]
 > `pbir.tools` is in beta. Back up reports before large edits, especially bulk formatting, conversion, merge, and publish workflows.
 
-## What You Get
-
-- `pbir`: command-line interface for local PBIR report work
-- `pbir setup`: helper for installing assistant-specific instructions and skills
+---
 
 ## Install
 
-### PyPI (recommended for agents)
+### PyPI (recommended)
 
 ```bash
 uv tool install pbir-cli
@@ -30,11 +34,12 @@ uv tool install pbir-cli
 
 Or with pip: `pip install pbir-cli`
 
-### Native installers
+<details>
+<summary><strong>Native installers (macOS / Windows)</strong></summary>
 
 Download the latest macOS or Windows installer from [GitHub Releases](https://github.com/maxanatsko/pbir.tools/releases).
 
-### macOS
+**macOS**
 
 1. Download the installer from Releases and try to open it once.
 2. If macOS blocks it because the installer is unsigned or not notarized, open:
@@ -43,12 +48,14 @@ Download the latest macOS or Windows installer from [GitHub Releases](https://gi
 4. Click `Open Anyway`.
 5. When macOS asks again, click `Open` and finish the installation.
 
-### Windows
+**Windows**
 
 1. Download the installer from Releases and run it.
 2. If Windows Defender SmartScreen shows `Windows protected your PC`, click `More info`.
 3. Confirm the installer name, then click `Run anyway`.
 4. Finish the installation.
+
+</details>
 
 After installation, open a new terminal and verify:
 
@@ -59,11 +66,11 @@ pbir --version
 ## Quick Start
 
 ```bash
-pbir ls
-pbir tree "Sales.Report" -v
-pbir model "Sales.Report" -d
-pbir add visual card "Sales.Report/Overview.Page" --title "Revenue" -d "Values:Sales.Revenue"
-pbir validate "Sales.Report"
+pbir ls                                                                # List reports
+pbir tree "Sales.Report" -v                                            # Full structure with fields
+pbir model "Sales.Report" -d                                           # Model schema
+pbir add visual card "Sales.Report/Overview.Page" --title "Revenue"    # Add a visual
+pbir validate "Sales.Report"                                           # Health check
 ```
 
 `pbir` works with PBIR-format reports stored as folders, using paths like:
@@ -72,11 +79,12 @@ pbir validate "Sales.Report"
 Report.Report/Page.Page/Visual.Visual
 ```
 
-## AI Assistants
+## AI Assistants & Plugins
 
-`pbir` is built for agents. To get the most out of it with your AI coding assistant, install the **Power BI plugins** from the [power-bi-agentic-development](https://github.com/data-goblin/power-bi-agentic-development) marketplace. These plugins provide skills, hooks, and agents that teach your assistant how to work with Power BI reports, semantic models, themes, DAX, and more.
+`pbir` is built for agents. To get the most out of it, install the **Power BI plugins** from the [power-bi-agentic-development](https://github.com/data-goblin/power-bi-agentic-development) marketplace. These plugins provide skills, hooks, and agents that teach your assistant how to work with Power BI reports, semantic models, themes, DAX, and more.
 
-**Option 1: Install plugins via `pbir setup`** (recommended)
+<details>
+<summary><strong>Option 1: Install plugins via <code>pbir setup</code></strong> (recommended)</summary>
 
 ```bash
 pbir setup
@@ -90,11 +98,26 @@ pbir setup --agent claude-code --all            # Claude Code only, all plugins
 pbir setup --plugin reports --plugin fabric-cli # Specific plugins
 ```
 
-**Option 2: Install the marketplace directly**
+</details>
+
+<details>
+<summary><strong>Option 2: Install the marketplace directly</strong></summary>
 
 Follow the instructions at [power-bi-agentic-development](https://github.com/data-goblin/power-bi-agentic-development) to install the full marketplace plugin with all skills, agents, and hooks.
 
-**After installing**, your assistant will have access to skills for report creation, visual formatting, field binding, conditional formatting, theme management, filters, bookmarks, and more -- all driven by `pbir` commands under the hood.
+**Claude Code:**
+```bash
+claude plugin marketplace add data-goblin/power-bi-agentic-development
+```
+
+**GitHub Copilot CLI:**
+```bash
+copilot plugin install data-goblin/power-bi-agentic-development
+```
+
+</details>
+
+After installing, your assistant will have access to skills for report creation, visual formatting, field binding, conditional formatting, theme management, filters, bookmarks, and more -- all driven by `pbir` commands under the hood.
 
 ## Documentation
 
@@ -115,3 +138,10 @@ Follow the instructions at [power-bi-agentic-development](https://github.com/dat
 
 - Run `pbir --help` for the top-level CLI surface.
 - Run `pbir <command> --help` for command-specific usage.
+- [Report issues](https://github.com/maxanatsko/pbir.tools/issues)
+
+---
+
+<p align="center">
+  <a href="https://github.com/data-goblin">Kurt Buhler</a> & <a href="https://github.com/maxanatsko">Maxim Anatsko</a>
+</p>
