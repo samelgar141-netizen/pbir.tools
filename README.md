@@ -87,7 +87,24 @@ Report.Report/Page.Page/Visual.Visual
 `pbir` is built for agents. To get the most out of it, install the **Power BI plugins** from the [power-bi-agentic-development](https://github.com/data-goblin/power-bi-agentic-development) marketplace. These plugins provide skills, hooks, and agents that teach your agent how to work with Power BI reports, semantic models, themes, DAX, and more.
 
 <details>
-<summary><strong>Option 1: Install plugins via <code>pbir setup</code></strong> (recommended)</summary>
+<summary><strong>Option 1: Install the marketplace directly</strong> (recommended)</summary>
+
+Follow the instructions at [power-bi-agentic-development](https://github.com/data-goblin/power-bi-agentic-development) to install the full marketplace plugin with all skills, agents, and hooks. After installing, run `/plugin` in your agent to enable auto-update and install plugins.
+
+**Claude Code:**
+```bash
+claude plugin marketplace add data-goblin/power-bi-agentic-development
+```
+
+**GitHub Copilot CLI:**
+```bash
+copilot plugin install data-goblin/power-bi-agentic-development
+```
+
+</details>
+
+<details>
+<summary><strong>Option 2: Install plugins via <code>pbir setup</code></strong></summary>
 
 ```bash
 pbir setup
@@ -99,23 +116,6 @@ This auto-detects which agents you have installed (Claude Code, Cursor, Copilot,
 pbir setup --all                                # Install all plugins, all agents
 pbir setup --agent claude-code --all            # Claude Code only, all plugins
 pbir setup --plugin reports --plugin fabric-cli # Specific plugins
-```
-
-</details>
-
-<details>
-<summary><strong>Option 2: Install the marketplace directly</strong></summary>
-
-Follow the instructions at [power-bi-agentic-development](https://github.com/data-goblin/power-bi-agentic-development) to install the full marketplace plugin with all skills, agents, and hooks.
-
-**Claude Code:**
-```bash
-claude plugin marketplace add data-goblin/power-bi-agentic-development
-```
-
-**GitHub Copilot CLI:**
-```bash
-copilot plugin install data-goblin/power-bi-agentic-development
 ```
 
 </details>
