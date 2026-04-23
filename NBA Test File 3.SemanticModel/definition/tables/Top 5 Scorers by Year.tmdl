@@ -1,0 +1,60 @@
+/// Top 5 point scorers per year since 2010
+table 'Top 5 Scorers by Year'
+	lineageTag: 3df323a7-b4a7-4c94-a3b5-1435972d94cc
+
+	column Year
+		lineageTag: 7b6391d1-c0d5-4438-a2a1-8e10c7c043bf
+		isNameInferred
+		sourceColumn: [Year]
+
+	column Rank
+		lineageTag: 97d7d65a-4c14-41c9-a0f1-8f889d9dab83
+		isNameInferred
+		sourceColumn: [Rank]
+
+	column Player
+		lineageTag: a6fbf540-1053-4c70-adbc-5c5ec803d4d9
+		isNameInferred
+		sourceColumn: [Player]
+
+	column Team
+		lineageTag: b1f1f6ff-f0f9-48e0-8355-05d682c16faa
+		isNameInferred
+		sourceColumn: [Team]
+
+	column PPG
+		lineageTag: c1b7037e-dec2-4314-ab09-e933a9fd5351
+		isNameInferred
+		sourceColumn: [PPG]
+
+	partition 'Top 5 Scorers by Year' = calculated
+		mode: import
+		source =
+				VAR TopScorers =
+				    ADDCOLUMNS(
+				        SUMMARIZE(
+				            FILTER('Combined Dataframe', 'Combined Dataframe'[Year] >= 2010),
+				            'Combined Dataframe'[Year],
+				            'Combined Dataframe'[Player],
+				            'Combined Dataframe'[Tm]
+				        ),
+				        "TotalPTS", CALCULATE(SUM('Combined Dataframe'[PTS]))
+				    )
+				VAR Ranked =
+				    ADDCOLUMNS(
+				        TopScorers,
+				        "Rank", RANKX(
+				            FILTER(TopScorers, [Year] = EARLIER([Year])),
+				            [TotalPTS],,DESC,DENSE
+				        )
+				    )
+				RETURN
+				    SELECTCOLUMNS(
+				        FILTER(Ranked, [Rank] <= 5),
+				        "Year", [Year],
+				        "Rank", [Rank],
+				        "Player", [Player],
+				        "Team", [Tm],
+				        "PPG", [TotalPTS]
+				    )
+

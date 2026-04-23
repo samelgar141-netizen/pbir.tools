@@ -1,0 +1,446 @@
+table 'Combined Dataframe'
+	lineageTag: 565fe305-0003-4689-a71b-78980a93fdfa
+
+	column Column1
+		dataType: int64
+		formatString: 0
+		lineageTag: 2050f683-49ee-4ee0-ba82-3c7091563a1c
+		summarizeBy: sum
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Unnamed: 0'
+		dataType: int64
+		formatString: 0
+		lineageTag: 6e114e7f-d03c-42bb-81b5-199b278232cb
+		summarizeBy: sum
+		sourceColumn: Unnamed: 0
+
+		annotation SummarizationSetBy = Automatic
+
+	column Player
+		dataType: string
+		lineageTag: b4c1400c-0eaa-439a-8576-56d2dedec270
+		summarizeBy: none
+		sourceColumn: Player
+
+		annotation SummarizationSetBy = Automatic
+
+	column Pos
+		dataType: string
+		lineageTag: 5cbf1e88-a8a0-4dd3-b1d3-f9fe5659f1bc
+		summarizeBy: none
+		sourceColumn: Pos
+
+		annotation SummarizationSetBy = Automatic
+
+	column Age
+		dataType: int64
+		formatString: 0
+		lineageTag: a3459750-260f-48ea-a7a5-2d0a862a385b
+		summarizeBy: sum
+		sourceColumn: Age
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tm
+		dataType: string
+		lineageTag: c99f6880-483c-4fe2-a049-67e141e837be
+		summarizeBy: none
+		sourceColumn: Tm
+
+		annotation SummarizationSetBy = Automatic
+
+	column G
+		dataType: int64
+		formatString: 0
+		lineageTag: 2589deb1-01a0-47fa-bc4b-a7d3c923b090
+		summarizeBy: sum
+		sourceColumn: G
+
+		annotation SummarizationSetBy = Automatic
+
+	column GS
+		dataType: int64
+		formatString: 0
+		lineageTag: 3714fabc-17c3-46cf-b417-453b1826a8d4
+		summarizeBy: sum
+		sourceColumn: GS
+
+		annotation SummarizationSetBy = Automatic
+
+	column MP
+		dataType: double
+		lineageTag: 53b18936-b7fb-42f3-86bc-4610f5fd17e1
+		summarizeBy: sum
+		sourceColumn: MP
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column FG
+		dataType: double
+		lineageTag: 4b4caafa-38ff-4998-9f4e-c9a68a1d54b5
+		summarizeBy: sum
+		sourceColumn: FG
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column FGA
+		dataType: double
+		lineageTag: c944b1e1-d551-4028-851b-42d7fcc080ef
+		summarizeBy: sum
+		sourceColumn: FGA
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column FG%
+		dataType: double
+		lineageTag: 637ea9ed-26ae-4a47-95c8-5efd09eb323a
+		summarizeBy: sum
+		sourceColumn: FG%
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 3P
+		dataType: double
+		lineageTag: c2963c74-b674-43ef-82ef-ae75675dd4a3
+		summarizeBy: sum
+		sourceColumn: 3P
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 3PA
+		dataType: double
+		lineageTag: c0223a0f-355e-4f1e-8cc5-ef7dbb2ed46c
+		summarizeBy: sum
+		sourceColumn: 3PA
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 3P%
+		dataType: double
+		lineageTag: ffd87e32-6bab-4044-add4-8be2571c85a5
+		summarizeBy: sum
+		sourceColumn: 3P%
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 2P
+		dataType: double
+		lineageTag: b77432c8-4dbc-4069-833b-4625b2194734
+		summarizeBy: sum
+		sourceColumn: 2P
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 2PA
+		dataType: double
+		lineageTag: 5164600a-5106-4f88-8995-72fdb7668e39
+		summarizeBy: sum
+		sourceColumn: 2PA
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 2P%
+		dataType: double
+		lineageTag: 585d8775-4af2-4666-b97f-e099f4a9e7f4
+		summarizeBy: sum
+		sourceColumn: 2P%
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column eFG%
+		dataType: double
+		lineageTag: e1b38be5-273b-4c00-a541-02408ccad464
+		summarizeBy: sum
+		sourceColumn: eFG%
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column FT
+		dataType: double
+		lineageTag: e9983857-978d-4d72-afe5-ea7cfdaa08de
+		summarizeBy: sum
+		sourceColumn: FT
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column FTA
+		dataType: double
+		lineageTag: ccbde143-f290-4fcd-83d0-5f624b582bb3
+		summarizeBy: sum
+		sourceColumn: FTA
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column FT%
+		dataType: double
+		lineageTag: 56851b2b-aa35-4aa1-b1e4-3150d5059f13
+		summarizeBy: sum
+		sourceColumn: FT%
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ORB
+		dataType: double
+		lineageTag: 486e4bc7-7b89-4986-b0ca-84169853a293
+		summarizeBy: sum
+		sourceColumn: ORB
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DRB
+		dataType: double
+		lineageTag: b64b7b39-93fb-400f-8d13-5d6c943767f3
+		summarizeBy: sum
+		sourceColumn: DRB
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TRB
+		dataType: double
+		lineageTag: d19252ee-31f1-47c1-897b-7ee99cf0754e
+		summarizeBy: sum
+		sourceColumn: TRB
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AST
+		dataType: double
+		lineageTag: 1ae5b73b-3f0b-4e26-99e7-efc3c09893d8
+		summarizeBy: sum
+		sourceColumn: AST
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column STL
+		dataType: double
+		lineageTag: 1c972f4a-f133-4cff-9bf8-c5ce08ba82c9
+		summarizeBy: sum
+		sourceColumn: STL
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column BLK
+		dataType: double
+		lineageTag: 3a245a1b-e0d2-46d4-84f9-058fe60738a8
+		summarizeBy: sum
+		sourceColumn: BLK
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TOV
+		dataType: double
+		lineageTag: eef7b5d9-1ebe-4723-a62e-f80b040a9c8a
+		summarizeBy: sum
+		sourceColumn: TOV
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PF
+		dataType: double
+		lineageTag: a87cef10-f920-4b4e-8d31-ea1e8753ce42
+		summarizeBy: sum
+		sourceColumn: PF
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PTS
+		dataType: double
+		lineageTag: 09c5efbc-2fa1-4513-aefe-9d9524afe52d
+		summarizeBy: sum
+		sourceColumn: PTS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 82cffa40-7e07-44ad-b0ba-cc090eaa3449
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column First
+		dataType: int64
+		formatString: 0
+		lineageTag: db375988-fc24-470f-923d-65d8ea5b82be
+		summarizeBy: sum
+		sourceColumn: First
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Pts Won'
+		dataType: int64
+		formatString: 0
+		lineageTag: 2e2bdb2a-1c26-4d1f-8424-f5d081703323
+		summarizeBy: sum
+		sourceColumn: Pts Won
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Pts Max'
+		dataType: int64
+		formatString: 0
+		lineageTag: fdb49e77-961d-4104-b2d1-afdaae877f5b
+		summarizeBy: sum
+		sourceColumn: Pts Max
+
+		annotation SummarizationSetBy = Automatic
+
+	column Share
+		dataType: double
+		lineageTag: 44ac0ccd-5338-41a0-8115-1b3c74d7ec9b
+		summarizeBy: sum
+		sourceColumn: Share
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Team
+		dataType: string
+		lineageTag: 42e7970b-a724-4b5f-b76d-2a869fb5cab2
+		summarizeBy: none
+		sourceColumn: Team
+
+		annotation SummarizationSetBy = Automatic
+
+	column W
+		dataType: int64
+		formatString: 0
+		lineageTag: c8db6caf-8e70-4b87-beec-26905c7ebb26
+		summarizeBy: sum
+		sourceColumn: W
+
+		annotation SummarizationSetBy = Automatic
+
+	column L
+		dataType: int64
+		formatString: 0
+		lineageTag: c808c2b9-c0a8-4edc-8b5c-e7cfcb2c4f2b
+		summarizeBy: sum
+		sourceColumn: L
+
+		annotation SummarizationSetBy = Automatic
+
+	column W/L%
+		dataType: double
+		lineageTag: ad4a9809-8253-42fa-bf59-7a4a52e3fae7
+		summarizeBy: sum
+		sourceColumn: W/L%
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PS/G
+		dataType: double
+		lineageTag: 1796081f-0924-497d-bce6-6cb18484abd7
+		summarizeBy: sum
+		sourceColumn: PS/G
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PA/G
+		dataType: double
+		lineageTag: c55ee66b-4018-4c96-a5fa-48897f802687
+		summarizeBy: sum
+		sourceColumn: PA/G
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SRS
+		dataType: double
+		lineageTag: c4817bd3-6ae4-4324-9d7e-453938748903
+		summarizeBy: sum
+		sourceColumn: SRS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'MVP Vote Flag'
+		dataType: string
+		lineageTag: 81fb3cec-9348-4989-8901-007891b1b980
+		summarizeBy: none
+		sourceColumn: MVP Vote Flag
+
+		annotation SummarizationSetBy = Automatic
+
+	column ASTOCKS
+		dataType: double
+		lineageTag: f482afab-8379-408f-9a1f-c32db85c4343
+		summarizeBy: sum
+		sourceColumn: ASTOCKS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'Combined Dataframe' = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\samel\OneDrive\Documents\NBA Project\Files\Combined Dataframe w ASTOCKS.csv"),[Delimiter=",", Columns=45, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"", Int64.Type}, {"Unnamed: 0", Int64.Type}, {"Player", type text}, {"Pos", type text}, {"Age", Int64.Type}, {"Tm", type text}, {"G", Int64.Type}, {"GS", Int64.Type}, {"MP", type number}, {"FG", type number}, {"FGA", type number}, {"FG%", type number}, {"3P", type number}, {"3PA", type number}, {"3P%", type number}, {"2P", type number}, {"2PA", type number}, {"2P%", type number}, {"eFG%", type number}, {"FT", type number}, {"FTA", type number}, {"FT%", type number}, {"ORB", type number}, {"DRB", type number}, {"TRB", type number}, {"AST", type number}, {"STL", type number}, {"BLK", type number}, {"TOV", type number}, {"PF", type number}, {"PTS", type number}, {"Year", Int64.Type}, {"First", Int64.Type}, {"Pts Won", Int64.Type}, {"Pts Max", Int64.Type}, {"Share", type number}, {"Team", type text}, {"W", Int64.Type}, {"L", Int64.Type}, {"W/L%", type number}, {"PS/G", type number}, {"PA/G", type number}, {"SRS", type number}, {"MVP Vote Flag", type text}, {"ASTOCKS", type number}})
+				in
+				    #"Changed Type"
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,43 @@
+/// Container table for measures
+table _Measures
+	lineageTag: 5ee2499e-f730-406c-9964-8327c4bdb551
+
+	/// Calculates the average points scored per game across all players in the dataset
+	measure 'Average Points' = AVERAGE('Combined Dataframe'[PTS])
+		formatString: #,0.00
+		displayFolder: _CountingStats
+		lineageTag: fe510222-15b7-46d6-9488-3a0c1bc9d143
+
+	/// Calculates the average assists per game across all players in the dataset
+	measure 'Average Assists' = AVERAGE('Combined Dataframe'[AST])
+		formatString: #,0.00
+		displayFolder: _CountingStats
+		lineageTag: a9b90722-e8af-4f64-8898-35d2addb8ff4
+
+	/// Calculates the average total rebounds per game across all players in the dataset
+	measure 'Average Rebounds' = AVERAGE('Combined Dataframe'[TRB])
+		formatString: #,0.00
+		displayFolder: _CountingStats
+		lineageTag: 2333b13f-5182-49a3-92e8-18bd9c38eba5
+
+	/// Calculates the average turnovers per game across all players in the dataset
+	measure 'Average Turnovers' = AVERAGE('Combined Dataframe'[TOV])
+		formatString: #,0.00
+		displayFolder: _CountingStats
+		lineageTag: 2c4478ed-ea68-4f63-9fc2-c06658ca2653
+
+	/// Calculates the average steals per game across all players in the dataset
+	measure 'Average Steals' = AVERAGE('Combined Dataframe'[STL])
+		formatString: #,0.00
+		displayFolder: _CountingStats
+		lineageTag: 41f9583b-44f8-4557-a54f-937ce2bec380
+
+	column Dummy
+		lineageTag: 8473ef1c-97f3-4afe-97cf-b3d4e5b232ed
+		isNameInferred
+		sourceColumn: [Dummy]
+
+	partition _Measures = calculated
+		mode: import
+		source = ROW("Dummy", 1)
+
