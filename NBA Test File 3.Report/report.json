@@ -20,13 +20,106 @@
   "sections": [
     {
       "config": "{}",
-      "displayName": "Page 1",
+      "displayName": "Trends Over Time",
       "displayOption": 1,
       "filters": "[]",
-      "height": 720.00,
+      "height": 720.0,
       "name": "b7ddad6b1c88d36f1787",
-      "visualContainers": [],
-      "width": 1280.00
+      "visualContainers": [
+        {
+          "x": 20.0,
+          "y": 60.0,
+          "z": 1000,
+          "width": 590.0,
+          "height": 290.0,
+          "config": "{\"name\":\"e1f2a3b4c5d6e7f8a9b0\",\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Combined Dataframe.Year\",\"active\":true}],\"Y\":[{\"queryRef\":\"_Measures.Average Points\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Combined Dataframe\",\"Type\":0},{\"Name\":\"_\",\"Entity\":\"_Measures\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Year\"},\"Name\":\"Combined Dataframe.Year\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Average Points\"},\"Name\":\"_Measures.Average Points\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Year\"}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'League Avg Points Per Game by Season'\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}",
+          "filters": "[]"
+        },
+        {
+          "x": 650.0,
+          "y": 60.0,
+          "z": 2000,
+          "width": 610.0,
+          "height": 290.0,
+          "config": "{\"name\":\"f2a3b4c5d6e7f8a9b0c1\",\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Combined Dataframe.Year\",\"active\":true}],\"Y\":[{\"queryRef\":\"_Measures.Avg 3P Attempted\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Combined Dataframe\",\"Type\":0},{\"Name\":\"_\",\"Entity\":\"_Measures\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Year\"},\"Name\":\"Combined Dataframe.Year\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Avg 3P Attempted\"},\"Name\":\"_Measures.Avg 3P Attempted\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Year\"}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'3-Point Attempts Per Player by Season'\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}",
+          "filters": "[]"
+        },
+        {
+          "x": 20.0,
+          "y": 370.0,
+          "z": 3000,
+          "width": 590.0,
+          "height": 330.0,
+          "config": "{\"name\":\"a3b4c5d6e7f8a9b0c1d2\",\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Combined Dataframe.Year\",\"active\":true}],\"Y\":[{\"queryRef\":\"_Measures.Average Assists\"},{\"queryRef\":\"_Measures.Average Rebounds\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Combined Dataframe\",\"Type\":0},{\"Name\":\"_\",\"Entity\":\"_Measures\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Year\"},\"Name\":\"Combined Dataframe.Year\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Average Assists\"},\"Name\":\"_Measures.Average Assists\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Average Rebounds\"},\"Name\":\"_Measures.Average Rebounds\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Year\"}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Assists & Rebounds Trends by Season'\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}",
+          "filters": "[]"
+        },
+        {
+          "x": 650.0,
+          "y": 370.0,
+          "z": 4000,
+          "width": 610.0,
+          "height": 330.0,
+          "config": "{\"name\":\"b4c5d6e7f8a9b0c1d2e3\",\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Top 5 Scorers by Year.Year\"},{\"queryRef\":\"Top 5 Scorers by Year.Rank\"},{\"queryRef\":\"Top 5 Scorers by Year.Player\"},{\"queryRef\":\"Top 5 Scorers by Year.Team\"},{\"queryRef\":\"Top 5 Scorers by Year.PPG\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Top 5 Scorers by Year\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Year\"},\"Name\":\"Top 5 Scorers by Year.Year\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Rank\"},\"Name\":\"Top 5 Scorers by Year.Rank\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Player\"},\"Name\":\"Top 5 Scorers by Year.Player\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Team\"},\"Name\":\"Top 5 Scorers by Year.Team\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"PPG\"},\"Name\":\"Top 5 Scorers by Year.PPG\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Year\"}}},{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Rank\"}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Top 5 Scorers by Year'\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}",
+          "filters": "[]"
+        }
+      ],
+      "width": 1280.0
+    },
+    {
+      "config": "{}",
+      "displayName": "2024 Season Summary",
+      "displayOption": 1,
+      "filters": "[{\"$schema\": \"https://powerbi.com/product/schema#basic\", \"target\": {\"table\": \"Combined Dataframe\", \"column\": \"Year\"}, \"filterType\": 1, \"operator\": \"In\", \"values\": [2024]}]",
+      "height": 720.0,
+      "name": "c2d3e4f5a6b7c8d9e0f1",
+      "visualContainers": [
+        {
+          "x": 20.0,
+          "y": 60.0,
+          "z": 5000,
+          "width": 185.0,
+          "height": 110.0,
+          "config": "{\"name\":\"c5d6e7f8a9b0c1d2e3f4\",\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"_Measures.Average Points\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"_\",\"Entity\":\"_Measures\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Average Points\"},\"Name\":\"_Measures.Average Points\"}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Avg PPG'\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}",
+          "filters": "[]"
+        },
+        {
+          "x": 230.0,
+          "y": 60.0,
+          "z": 6000,
+          "width": 185.0,
+          "height": 110.0,
+          "config": "{\"name\":\"d6e7f8a9b0c1d2e3f4a5\",\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"_Measures.Average Assists\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"_\",\"Entity\":\"_Measures\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Average Assists\"},\"Name\":\"_Measures.Average Assists\"}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Avg APG'\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}",
+          "filters": "[]"
+        },
+        {
+          "x": 440.0,
+          "y": 60.0,
+          "z": 7000,
+          "width": 185.0,
+          "height": 110.0,
+          "config": "{\"name\":\"e7f8a9b0c1d2e3f4a5b6\",\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"_Measures.Average Rebounds\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"_\",\"Entity\":\"_Measures\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"Average Rebounds\"},\"Name\":\"_Measures.Average Rebounds\"}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Avg RPG'\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}",
+          "filters": "[]"
+        },
+        {
+          "x": 20.0,
+          "y": 200.0,
+          "z": 8000,
+          "width": 590.0,
+          "height": 490.0,
+          "config": "{\"name\":\"f8a9b0c1d2e3f4a5b6c7\",\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Combined Dataframe.Player\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(Combined Dataframe.PTS)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Combined Dataframe\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Player\"},\"Name\":\"Combined Dataframe.Player\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"PTS\"}},\"Function\":0},\"Name\":\"Sum(Combined Dataframe.PTS)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"PTS\"}},\"Function\":0}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Top Scorers (2024)'\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}",
+          "filters": "[{\"$schema\": \"https://powerbi.com/product/schema#topN\", \"target\": {\"table\": \"Combined Dataframe\", \"column\": \"Player\"}, \"filterType\": 3, \"operator\": \"Top\", \"itemCount\": 15, \"orderByTarget\": {\"table\": \"Combined Dataframe\", \"column\": \"PTS\", \"aggregationFunction\": \"Sum\"}}]"
+        },
+        {
+          "x": 650.0,
+          "y": 200.0,
+          "z": 9000,
+          "width": 610.0,
+          "height": 490.0,
+          "config": "{\"name\":\"a9b0c1d2e3f4a5b6c7d8\",\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Combined Dataframe.Player\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(Combined Dataframe.AST)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Combined Dataframe\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Player\"},\"Name\":\"Combined Dataframe.Player\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"AST\"}},\"Function\":0},\"Name\":\"Sum(Combined Dataframe.AST)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"AST\"}},\"Function\":0}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Top Assist Leaders (2024)'\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}",
+          "filters": "[{\"$schema\": \"https://powerbi.com/product/schema#topN\", \"target\": {\"table\": \"Combined Dataframe\", \"column\": \"Player\"}, \"filterType\": 3, \"operator\": \"Top\", \"itemCount\": 15, \"orderByTarget\": {\"table\": \"Combined Dataframe\", \"column\": \"AST\", \"aggregationFunction\": \"Sum\"}}]"
+        }
+      ],
+      "width": 1280.0
     }
   ]
 }
